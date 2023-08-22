@@ -3,6 +3,6 @@ provider "aws" {
 }
 
 resource "aws_kinesis_stream" "data_portfolio_stream" {
-  name             = "DataPortfolioKinesisStream"
-  shard_count      = 1
+  name        = "DataPortfolioStream"
+  shard_count = 1
 }

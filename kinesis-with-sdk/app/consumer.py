@@ -2,10 +2,11 @@ import time
 
 import boto3
 
-stream_name = "DataPortfolioKinesisStream"  # Replace with your stream name
+stream_name = "DataPortfolioStream"  # Replace with your stream name
 
 
 def consume_stream():
+
     kinesis_client = boto3.client('kinesis')
 
     shard_iterator = kinesis_client.get_shard_iterator(

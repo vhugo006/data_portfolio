@@ -3,13 +3,13 @@ import time
 import boto3
 from botocore.exceptions import NoCredentialsError
 
-stream_name = "DataPortfolioKinesisStream"  # Replace with your stream name
+stream_name = "DataPortfolioStream"  # Replace with your stream name
 
 
 def send_data_with_sdk(data):
-    try:
 
-        print(f"Initializing put record...")
+    try:
+        print(f"Initializing kinesis client...")
 
         kinesis_client = boto3.client('kinesis')
         response = kinesis_client.put_record(
@@ -23,7 +23,7 @@ def send_data_with_sdk(data):
 
 
 def main():
-    for i in range(1, 51):
+    for i in range(1, 11):
         message = f"Message {i}"
         send_data_with_sdk(message)
         time.sleep(1)
