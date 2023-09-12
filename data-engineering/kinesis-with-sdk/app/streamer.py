@@ -4,14 +4,13 @@ import boto3
 from botocore.exceptions import NoCredentialsError
 
 stream_name = "DataPortfolioStream"  # Replace with your stream name
+kinesis_client = boto3.client('kinesis')
 
 
 def send_data_with_sdk(data):
-
     try:
-        print(f"Initializing kinesis client...")
+        print(f"Sending data message: {data}...")
 
-        kinesis_client = boto3.client('kinesis')
         response = kinesis_client.put_record(
             StreamName=stream_name,
             Data=data.encode('utf-8'),
