@@ -27,3 +27,4 @@ modules.xml
 vcs.xml
 .idea/
 .ipynb_checkpoints
+venv
