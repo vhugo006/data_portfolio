@@ -16,8 +16,7 @@ Each transaction record includes various features such as transaction amount, tr
 
 The dataset is provided in CSV format and can be found in the `data` directory of this repository. It is recommended to explore the dataset and understand its structure before proceeding with the model development.
 
-The Kaggle url of the dataset is: https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023/
-
+The Kaggle url of the dataset is: model
 ## Model Development
 
 To build the fraud detection model, we will utilize various machine learning techniques and algorithms. 
